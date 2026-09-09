@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --color-void: #05070c;
-  --color-void-soft: #090d15;
-  --color-panel: #0d1420;
-  --color-panel-soft: #121b2b;
-  --color-steel: #1e2a3d;
-  --color-steel-soft: #16202f;
-  --color-cyan: #4ce7e0;
-  --color-cyan-dim: #1f5c58;
-  --color-amber: #f5a623;
-  --color-amber-dim: #6b4a1d;
-  --color-fog: #c7d2e0;
-  --color-fog-dim: #8492a6;
-  --color-bright: #f4f8fc;
-  --color-danger: #ff6b6b;
-  --color-success: #4ade80;
+  --color-void: #170a24;
+  --color-void-soft: #200f30;
+  --color-panel: #2b1442;
+  --color-panel-soft: #371952;
+  --color-steel: #5c2c76;
+  --color-steel-soft: #46225d;
+  --color-cyan: #ff2e88;
+  --color-cyan-dim: #7a1445;
+  --color-amber: #ff8a3d;
+  --color-amber-dim: #7a3a12;
+  --color-fog: #f2e3ef;
+  --color-fog-dim: #c49bc9;
+  --color-bright: #fff8fc;
+  --color-danger: #ff4d6d;
+  --color-success: #2ee6a8;
+  --color-violet: #7b2ff7;
 }
 
 @theme inline {
@@ -34,8 +35,9 @@
   --color-bright: var(--color-bright);
   --color-danger: var(--color-danger);
   --color-success: var(--color-success);
+  --color-violet: var(--color-violet);
 
-  --font-display: var(--font-space-grotesk);
+  --font-display: var(--font-anton);
   --font-body: var(--font-inter);
   --font-console: var(--font-jetbrains-mono);
 
@@ -120,24 +122,63 @@ body {
 /* Command center grid backdrop */
 .grid-backdrop {
   background-image:
-    linear-gradient(to right, rgba(76, 231, 224, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(76, 231, 224, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 46, 136, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 46, 136, 0.07) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
 .glass-panel {
   background: linear-gradient(
     180deg,
-    rgba(13, 20, 32, 0.85) 0%,
-    rgba(9, 13, 21, 0.85) 100%
+    rgba(43, 20, 66, 0.85) 0%,
+    rgba(32, 15, 48, 0.85) 100%
   );
   border: 1px solid var(--color-steel);
   backdrop-filter: blur(12px);
 }
 
+/* Vice City sunset gradient, used for the wordmark and accent fills */
+.vice-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-cyan) 0%,
+    var(--color-amber) 55%,
+    var(--color-violet) 100%
+  );
+}
+
+.vice-gradient-text {
+  background: linear-gradient(
+    100deg,
+    var(--color-cyan) 0%,
+    var(--color-amber) 55%,
+    var(--color-violet) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Poster-grain film texture, layered fixed over the whole viewport */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay {
+    display: none;
+  }
+}
+
 .hud-frame {
   position: relative;
-  border: 1px solid rgba(76, 231, 224, 0.35);
+  border: 1px solid rgba(255, 46, 136, 0.35);
 }
 
 .hud-frame::before,
@@ -171,11 +212,11 @@ body {
 }
 
 .text-glow-cyan {
-  text-shadow: 0 0 18px rgba(76, 231, 224, 0.45);
+  text-shadow: 0 0 18px rgba(255, 46, 136, 0.45);
 }
 
 .text-glow-amber {
-  text-shadow: 0 0 18px rgba(245, 166, 35, 0.4);
+  text-shadow: 0 0 18px rgba(255, 138, 61, 0.4);
 }
 
 .playbook-line {

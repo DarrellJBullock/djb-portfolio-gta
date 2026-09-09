@@ -42,21 +42,35 @@ export function CommandCenterPortrait({ size = "hero" }: CommandCenterPortraitPr
         className="absolute inset-0 animate-radar-spin rounded-full opacity-70"
         style={{
           background:
-            "conic-gradient(from 0deg, rgba(76,231,224,0.35), transparent 18%, transparent 100%)",
+            "conic-gradient(from 0deg, rgba(255,46,136,0.4), rgba(255,138,61,0.25) 10%, transparent 18%, transparent 100%)",
         }}
         aria-hidden="true"
       />
 
       <div className="absolute inset-3 overflow-hidden rounded-full border border-steel bg-panel">
         {hasFinalAvatar ? (
-          <Image
-            src={`/${FINAL_AVATAR_PATH}`}
-            alt="Stylized illustrated portrait of Darrell Bullock inside an Engineering Command Center"
-            fill
-            sizes="(min-width: 640px) 320px, 288px"
-            className="object-cover"
-            priority
-          />
+          <>
+            <Image
+              src={`/${FINAL_AVATAR_PATH}`}
+              alt="Stylized illustrated portrait of Darrell Bullock inside an Engineering Command Center"
+              fill
+              sizes="(min-width: 640px) 320px, 288px"
+              className="object-cover"
+              priority
+            />
+            <div
+              className="vice-gradient absolute inset-0 mix-blend-color-burn opacity-45"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-0 mix-blend-overlay opacity-30"
+              style={{
+                background:
+                  "linear-gradient(200deg, rgba(255,138,61,0.55) 0%, transparent 45%, rgba(123,47,247,0.55) 100%)",
+              }}
+              aria-hidden="true"
+            />
+          </>
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-b from-panel-soft to-panel">
             <span className="font-display text-4xl font-semibold text-cyan text-glow-cyan">

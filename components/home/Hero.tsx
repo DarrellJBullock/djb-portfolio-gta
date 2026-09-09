@@ -22,7 +22,7 @@ export function Hero() {
             Engineering Command Center
           </p>
 
-          <h1 className="font-display text-4xl font-semibold leading-[1.1] text-bright sm:text-5xl lg:text-6xl">
+          <h1 className="vice-gradient-text font-display text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">
             {siteConfig.heroHeadline}
           </h1>
 

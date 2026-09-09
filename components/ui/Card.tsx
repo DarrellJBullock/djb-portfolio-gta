@@ -14,7 +14,7 @@ export function Card({ as: Component = "div", children, className, interactive =
       className={cn(
         "glass-panel rounded-lg p-6",
         interactive &&
-          "transition-all duration-300 ease-out hover:border-cyan/50 hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(76,231,224,0.15)]",
+          "transition-all duration-300 ease-out hover:border-cyan/50 hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(255,46,136,0.2)]",
         className
       )}
     >

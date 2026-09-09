@@ -15,10 +15,11 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-display text-sm font-semibold tracking-wide text-bright"
+          className="font-display text-lg tracking-wide text-bright"
           onClick={() => setIsOpen(false)}
         >
-          <span className="text-cyan" aria-hidden="true">{"//"}</span> {SITE_NAME}
+          <span className="text-cyan" aria-hidden="true">{"//"}</span>{" "}
+          <span className="vice-gradient-text">{SITE_NAME}</span>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">

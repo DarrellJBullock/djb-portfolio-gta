@@ -8,8 +8,9 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-display text-sm font-semibold text-bright">
-              <span className="text-cyan" aria-hidden="true">{"//"}</span> {SITE_NAME}
+            <p className="font-display text-base text-bright">
+              <span className="text-cyan" aria-hidden="true">{"//"}</span>{" "}
+              <span className="vice-gradient-text">{SITE_NAME}</span>
             </p>
             <p className="mt-2 max-w-sm text-sm text-fog-dim">{siteConfig.description}</p>
           </div>

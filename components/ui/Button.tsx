@@ -29,7 +29,7 @@ type ButtonProps = ButtonAsLink | ButtonAsButton;
 
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
   primary:
-    "bg-cyan text-void border border-cyan hover:bg-transparent hover:text-cyan shadow-[0_0_24px_rgba(76,231,224,0.35)]",
+    "vice-gradient text-void border border-transparent hover:opacity-90 shadow-[0_0_28px_rgba(255,46,136,0.45)]",
   secondary:
     "bg-transparent text-bright border border-steel hover:border-cyan hover:text-cyan",
   ghost: "bg-transparent text-fog border border-transparent hover:text-cyan",
