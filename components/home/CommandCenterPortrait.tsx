@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
 
-const FINAL_AVATAR_PATH = "images/darrell-command-center-avatar.png";
+const FINAL_AVATAR_PATH = "images/gta-avatar.jpg";
 const REFERENCE_PATHS = ["reference/darrell-reference-1.jpg", "reference/darrell-reference-2.jpg"];
 
 const DOMAIN_TAGS = ["AI", "Healthcare", "Data", "Sports", "Frontend"];
@@ -21,7 +21,7 @@ function publicFileExists(relativePath: string) {
 
 /**
  * Renders the final stylized caricature once it exists at
- * public/images/darrell-command-center-avatar.png. Until then, renders a
+ * public/images/gta-avatar.jpg. Until then, renders a
  * polished Engineering Command Center placeholder frame so the build never
  * blocks on a missing image asset.
  */
@@ -49,28 +49,14 @@ export function CommandCenterPortrait({ size = "hero" }: CommandCenterPortraitPr
 
       <div className="absolute inset-3 overflow-hidden rounded-full border border-steel bg-panel">
         {hasFinalAvatar ? (
-          <>
-            <Image
-              src={`/${FINAL_AVATAR_PATH}`}
-              alt="Stylized illustrated portrait of Darrell Bullock inside an Engineering Command Center"
-              fill
-              sizes="(min-width: 640px) 320px, 288px"
-              className="object-cover"
-              priority
-            />
-            <div
-              className="vice-gradient absolute inset-0 mix-blend-color-burn opacity-45"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute inset-0 mix-blend-overlay opacity-30"
-              style={{
-                background:
-                  "linear-gradient(200deg, rgba(255,138,61,0.55) 0%, transparent 45%, rgba(123,47,247,0.55) 100%)",
-              }}
-              aria-hidden="true"
-            />
-          </>
+          <Image
+            src={`/${FINAL_AVATAR_PATH}`}
+            alt="Vice City style illustrated caricature portrait of Darrell Bullock"
+            fill
+            sizes="(min-width: 640px) 320px, 288px"
+            className="object-cover"
+            priority
+          />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-b from-panel-soft to-panel">
             <span className="font-display text-4xl font-semibold text-cyan text-glow-cyan">
@@ -102,7 +88,7 @@ export function CommandCenterPortrait({ size = "hero" }: CommandCenterPortraitPr
 
       <p className="console-text absolute -bottom-8 left-1/2 w-full -translate-x-1/2 text-center text-[10px] uppercase tracking-widest text-fog-dim">
         {hasFinalAvatar
-          ? "Darrell Bullock Command Center Avatar"
+          ? "Darrell Bullock — Vice City Edition"
           : `Placeholder Avatar · Reference assets linked: ${referenceCount}/${REFERENCE_PATHS.length}`}
       </p>
     </div>

@@ -25,4 +25,4 @@ export const siteConfig = {
   contactNotificationEmail: "darrelljfresh@gmail.com",
 } as const;
 
-export const OG_IMAGE = "/images/darrell-command-center-avatar.png";
+export const OG_IMAGE = "/images/gta-key-art.jpg";

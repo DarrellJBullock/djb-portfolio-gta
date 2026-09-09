@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 import { Hero } from "@/components/home/Hero";
+import { VicePoster } from "@/components/home/VicePoster";
 import { SignalGrid } from "@/components/home/SignalGrid";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { EngineeringStrengths } from "@/components/home/EngineeringStrengths";
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <VicePoster />
       <SignalGrid />
       <FeaturedProjects />
       <EngineeringStrengths />
