@@ -3,15 +3,15 @@ export function CommandCenterBackground() {
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       {/* Retro cut sun: classic Vice City horizon motif */}
       <div
-        className="absolute left-1/2 top-[-120px] h-[560px] w-[560px] -translate-x-1/2 opacity-60 animate-drift"
+        className="absolute left-1/2 top-[-120px] h-[560px] w-[560px] -translate-x-1/2 opacity-30 animate-drift"
         style={{
           background:
             "radial-gradient(circle, #ffcf5c 0%, #ff2e88 48%, #7b2ff7 100%)",
           maskImage:
-            "repeating-linear-gradient(to bottom, black 0px, black 5px, transparent 5px, transparent 11px)",
+            "repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 15px)",
           WebkitMaskImage:
-            "repeating-linear-gradient(to bottom, black 0px, black 5px, transparent 5px, transparent 11px)",
-          filter: "blur(1px)",
+            "repeating-linear-gradient(to bottom, black 0px, black 3px, transparent 3px, transparent 15px)",
+          filter: "blur(2px)",
         }}
       />
 
