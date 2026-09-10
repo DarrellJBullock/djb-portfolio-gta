@@ -15,7 +15,7 @@ export function VicePoster() {
               priority={false}
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-transparent"
+              className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-void to-transparent"
               aria-hidden="true"
             />
             <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
