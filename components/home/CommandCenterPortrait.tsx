@@ -53,9 +53,9 @@ export function CommandCenterPortrait({ size = "hero" }: CommandCenterPortraitPr
             src={`/${FINAL_AVATAR_PATH}`}
             alt="Vice City style illustrated caricature portrait of Darrell Bullock"
             fill
-            sizes="(min-width: 640px) 320px, 288px"
+            sizes={size === "hero" ? "(min-width: 640px) 320px, 288px" : "160px"}
             className="object-cover"
-            priority
+            priority={size === "hero"}
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-b from-panel-soft to-panel">
