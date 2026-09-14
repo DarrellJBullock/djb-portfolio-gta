@@ -1,11 +1,12 @@
 import { getFeaturedProjects } from "@/lib/projects";
+import { withScreenshotFlag } from "@/lib/projectAssets";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Button } from "@/components/ui/Button";
 import { AnimatedPanel } from "@/components/ui/AnimatedPanel";
 
 export function FeaturedProjects() {
-  const featured = getFeaturedProjects();
+  const featured = getFeaturedProjects().map(withScreenshotFlag);
 
   return (
     <section className="border-b border-steel py-20">

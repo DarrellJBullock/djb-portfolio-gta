@@ -18,6 +18,8 @@ export interface Project {
   liveUrl: string;
   caseStudyUrl?: string;
   featured: boolean;
+  /** Set server-side by withScreenshotFlag(); not part of the static data. */
+  hasScreenshot?: boolean;
   stack: string[];
   highlights: string[];
   problem: string;

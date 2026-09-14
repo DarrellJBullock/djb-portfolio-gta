@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
 import { Card } from "@/components/ui/Card";
@@ -7,6 +8,21 @@ import { ProjectStack } from "@/components/projects/ProjectStack";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card as="article" interactive className="flex h-full flex-col">
+      {project.hasScreenshot && (
+        <Link
+          href={`/projects/${project.slug}`}
+          className="relative -mx-6 -mt-6 mb-4 block aspect-video overflow-hidden rounded-t-lg border-b border-steel"
+        >
+          <Image
+            src={`/images/screenshots/${project.slug}.jpg`}
+            alt={`Screenshot of the ${project.title} live demo`}
+            fill
+            sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </Link>
+      )}
+
       <div className="mb-4 flex items-center justify-between gap-3">
         <p className="console-text text-xs uppercase tracking-wide text-cyan">
           {project.category}

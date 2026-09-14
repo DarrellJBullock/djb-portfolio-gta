@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
+import { withScreenshotFlag } from "@/lib/projectAssets";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
 
@@ -19,7 +20,7 @@ export default function ProjectsPage() {
       />
 
       <div className="mt-10">
-        <ProjectGrid projects={projects} />
+        <ProjectGrid projects={projects.map(withScreenshotFlag)} />
       </div>
     </div>
   );
